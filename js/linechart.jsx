@@ -42,14 +42,14 @@ export default React.createClass({
   /**
    *
    */
-  setChartData: function(data) {
+  setChartData: function(data, type) {
     const labels = data.map(item => moment.unix(item.time).format('MMM Do, h:mm a')).reverse();
-    const followersCount = data.map(item => item.stats.followed_by).reverse();
-    const followers = this.generateDataSet('Followers', followersCount);
+    const counts = data.map(item => item.stats[type]).reverse();
+    const chart = this.generateDataSet('chart', counts);
 
     const lineData = {
       labels: labels,
-      datasets: [followers]
+      datasets: [chart]
     };
 
     this.setState({ lineData });
@@ -59,8 +59,9 @@ export default React.createClass({
    *
    */
   fetchChartData: function() {
+    const type = this.props.type;
     axios.get('http://aerostat.io:8080/stats', { params: { count: 10 } })
-    .then(response => this.setChartData(response.data));
+    .then(response => this.setChartData(response.data, type));
   },
 
   render: function() {

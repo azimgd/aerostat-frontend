@@ -25,11 +25,11 @@ body {
 	background: #f8f8f8; padding: 30px; color: #333; margin-top: 30px; display: flex;
 
 	&--right {
-		text-align: right; width: 40%;
+		text-align: right; width: 50%; padding-left: 10px;
 	}
 
 	&--left {
-		width: 60%;
+		width: 50%; padding-right: 10px;
 	}
 }
 

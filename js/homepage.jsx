@@ -11,14 +11,14 @@ export default (pros) => {
 
       <div className="charts">
         <div className="charts--block">
-          <h3 className="charts--block--title">Sample stats for @nike</h3>
-          <p className="charts--block--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          <Linechart/>
+          <h3 className="charts--block--title">Instagram stats for @nike account</h3>
+          <p className="charts--block--desc">Chart of most recent followers count</p>
+          <Linechart type="followed_by"/>
         </div>
         <div className="charts--block">
-          <h3 className="charts--block--title">Sample stats for @nike</h3>
-          <p className="charts--block--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          <Linechart/>
+          <h3 className="charts--block--title">Instagram stats for @nike account</h3>
+          <p className="charts--block--desc">Chart of most recent followings count</p>
+          <Linechart type="follows"/>
         </div>
       </div>
 
