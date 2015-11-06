@@ -60,7 +60,7 @@ export default React.createClass({
    */
   fetchChartData: function() {
     const type = this.props.type;
-    axios.get('http://aerostat.io:8080/stats', { params: { count: 10 } })
+    axios.get('/api/stats', { params: { count: 10 } })
     .then(response => this.setChartData(response.data, type));
   },
 
