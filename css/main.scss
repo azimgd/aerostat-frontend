@@ -5,7 +5,7 @@ body {
 	font-family: 'Lato'; font-style: normal; font-weight: 100;
 }
 
-.main-top {
+.mainTop {
 	background-color: #1A5188; background-image: url(http://i.imgur.com/nMBfnMv.jpg); background-size: cover; padding: 80px 30px; margin-bottom: 30px;
 
 	&--title {
@@ -21,23 +21,41 @@ body {
 	}
 }
 
-.main-bottom {
-	background: #f8f8f8; padding: 30px; color: #333; margin-top: 30px; display: flex;
+.mainBottom {
+	background: #f8f8f8; padding: 30px 0; color: #333; margin-top: 30px; display: flex;
 
-	&--right {
-		text-align: right; width: 50%; padding-left: 10px;
+	&--block {
+		width: 50%; padding: 0 30px;
+
+		&-right {
+			text-align: right; padding-left: 10px;
+		}
+
+		&-left {
+			padding-right: 10px;
+		}
 	}
 
-	&--left {
-		width: 50%; padding-right: 10px;
+
+	@media only screen and (max-width: 767px) and (orientation: portrait)
+	{
+		display: block;
+
+		&--block {
+			width: 100%; margin-bottom: 30px;
+		}
+
+		&--block:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .charts {
-	display: flex; flex-flow: row wrap; margin: 40px 0;
+	display: flex; margin: 40px 0;
 
 	&--block {
-		width: 50%; padding: 0 30px;
+		padding: 0 30px; width: 50%;
 
 		&--title {
 			margin-bottom: 0px; font-weight: 100;
@@ -45,6 +63,19 @@ body {
 
 		&--desc::after {
 			content: ' '; display: block; height: 1px; background: #ddd; margin: 20px auto;
+		}
+	}
+
+	@media only screen and (max-width: 767px) and (orientation: portrait)
+	{
+		display: block;
+
+		&--block {
+			width: 100%; margin-bottom: 30px;
+		}
+
+		&--block:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
