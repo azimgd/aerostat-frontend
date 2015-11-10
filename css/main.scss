@@ -22,7 +22,7 @@ body {
 }
 
 .mainBottom {
-	background: #f8f8f8; padding: 30px 0; color: #333; margin-top: 30px; display: flex;
+	background: #f8f8f8; padding: 30px 0; color: #333; margin-top: 30px; display: flex; flex-flow: row wrap;
 
 	&--block {
 		width: 50%; padding: 0 30px;
@@ -52,10 +52,10 @@ body {
 }
 
 .charts {
-	display: flex; margin: 40px 0;
+	display: flex; flex-flow: row wrap; margin: 40px 0;
 
 	&--block {
-		padding: 0 30px; width: 50%;
+		padding: 0 30px; width: 50%; margin-bottom: 30px;
 
 		&--title {
 			margin-bottom: 0px; font-weight: 100;

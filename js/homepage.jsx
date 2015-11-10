@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import Linechart from './linechart.jsx';
+import Instagram from './stats/instagram.jsx';
+import Bitcoin from './stats/bitcoin.jsx';
 import MainTop from './main-top.jsx';
 import MainBottom from './main-bottom.jsx';
 
@@ -13,12 +14,17 @@ export default (pros) => {
         <div className="charts--block">
           <h3 className="charts--block--title">Instagram stats for @nike account</h3>
           <p className="charts--block--desc">Chart of most recent followers count</p>
-          <Linechart type="followed_by"/>
+          <Instagram type="followed_by"/>
         </div>
         <div className="charts--block">
           <h3 className="charts--block--title">Instagram stats for @nike account</h3>
           <p className="charts--block--desc">Chart of most recent followings count</p>
-          <Linechart type="follows"/>
+          <Instagram type="follows"/>
+        </div>
+        <div className="charts--block">
+          <h3 className="charts--block--title">Bitcoin price</h3>
+          <p className="charts--block--desc">Chart of most recent bitcoin prices in USD</p>
+          <Bitcoin type="follows"/>
         </div>
       </div>
 
